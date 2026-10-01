@@ -1316,6 +1316,31 @@ html[dir="rtl"] .jrn__step::after{background-position:right}
   .jrn__step{opacity:1; transform:none; transition:none}
   .jrn__step.in:hover{transform:none}
 }
+
+/* ============================================================
+   LOGO SPARKLES — the logo's own four-point star, as a quiet background layer
+   (shape cut directly from the logo artwork)
+   ============================================================ */
+:root{--spark:url("data:image/png;base64,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")}
+.sparkles{position:absolute; inset:0; z-index:0; overflow:hidden; pointer-events:none}
+.sect > .wrap,#hero .hero__in{position:relative; z-index:1}
+.spk{--dx:var(--dx0); --dy:var(--dy0); position:absolute; left:var(--x); top:var(--y); width:var(--s); aspect-ratio:129/117;
+  background-color:var(--spk-c,var(--ivory)); opacity:var(--o);
+  -webkit-mask:var(--spark) center/contain no-repeat; mask:var(--spark) center/contain no-repeat;
+  translate:0 var(--py,0px); will-change:transform,translate;
+  animation:spkFloat var(--d) ease-in-out var(--dl) infinite alternate}
+.sparkles--light{--spk-c:var(--teal)}
+@keyframes spkFloat{
+  0%{transform:translate3d(0,0,0) rotate(-3deg) scale(.96); opacity:calc(var(--o) * .65)}
+  100%{transform:translate3d(var(--dx),var(--dy),0) rotate(4deg) scale(1.05); opacity:var(--o)}
+}
+@media (max-width:780px){
+  .spk{width:calc(var(--s) * .62); --dx:calc(var(--dx0) * .4); --dy:calc(var(--dy0) * .4)}
+  .spk[data-m="0"]{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  .spk{animation:none; translate:none; will-change:auto}
+}
 </style>
 </head>
 <body>
@@ -1375,6 +1400,7 @@ html[dir="rtl"] .jrn__step::after{background-position:right}
 <section id="hero">
   <div class="glow" aria-hidden="true"></div>
   <div class="grain" aria-hidden="true"></div>
+  <div class="sparkles" data-spk="hero" aria-hidden="true"></div>
   <div class="wrap hero__in">
     <h1 class="sr" data-t="hero.h1">Lustradent — where dentistry connects. A dental community in Amman, Jordan.</h1>
     <div class="hero__mark rv in" aria-hidden="true"><span class="mark mark--mask"></span></div>
@@ -1466,6 +1492,7 @@ html[dir="rtl"] .jrn__step::after{background-position:right}
 
 <!-- ECOSYSTEM -->
 <section class="sect ivory" id="ecosystem">
+  <div class="sparkles sparkles--light" data-spk="eco" aria-hidden="true"></div>
   <div class="wrap">
     <div class="head-block">
       <span class="idx" data-t="eco.idx">The vision</span>
@@ -1481,6 +1508,7 @@ html[dir="rtl"] .jrn__step::after{background-position:right}
 
 <!-- JOURNEY -->
 <section class="sect" id="journey">
+  <div class="sparkles" data-spk="jrn" aria-hidden="true"></div>
   <div class="wrap">
     <div class="head-block">
       <span class="idx" data-t="jrn.idx">Member journey</span>
@@ -1570,6 +1598,7 @@ html[dir="rtl"] .jrn__step::after{background-position:right}
 
 <!-- FOUNDER -->
 <section class="sect" id="founder">
+  <div class="sparkles sparkles--light" data-spk="fnd" aria-hidden="true"></div>
   <div class="wrap">
     <div class="rv founder-card">
 
@@ -2059,6 +2088,7 @@ function onScroll(){
       const on = steps.filter(s=>s.classList.contains('on'));
       steps.forEach(s=>s.classList.toggle('cur', s===on[on.length-1]));
     }
+    if(typeof moveSparks === 'function') moveSparks();
     ticking = false;
   });
 }
@@ -2069,6 +2099,56 @@ const io = new IntersectionObserver((es)=>{
   es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target) } });
 },{rootMargin:'0px 0px -12% 0px'});
 function observeAll(){ document.querySelectorAll('.rv:not(.in)').forEach(el=>io.observe(el)); }
+
+
+/* ============================================================
+   LOGO SPARKLES — placement, motion and gentle parallax
+   ============================================================ */
+const SPARKS = {
+  /* x,y = % of section · s = px · o = opacity · d = float seconds · dx,dy = drift px · k = parallax · m = keep on mobile */
+  hero:[
+    {x:5,  y:20, s:22, o:.2,  d:17, dl:-2,  dx:10, dy:-14, k:.05, m:1},
+    {x:90, y:11, s:58, o:.1,  d:24, dl:-9,  dx:-12,dy:16,  k:-.04,m:1},
+    {x:83, y:60, s:16, o:.2,  d:15, dl:-5,  dx:8,  dy:-10, k:.08, m:0},
+    {x:11, y:72, s:88, o:.08, d:28, dl:-13, dx:14, dy:-12, k:-.03,m:0},
+    {x:68, y:84, s:30, o:.14, d:20, dl:-7,  dx:-9, dy:12,  k:.06, m:1}
+  ],
+  eco:[
+    {x:3,  y:10, s:74, o:.07, d:26, dl:-6,  dx:12, dy:14,  k:-.03,m:1},
+    {x:94, y:22, s:20, o:.14, d:18, dl:-11, dx:-8, dy:-12, k:.06, m:0},
+    {x:89, y:86, s:42, o:.09, d:23, dl:-3,  dx:-10,dy:-14, k:.04, m:0}
+  ],
+  jrn:[
+    {x:94, y:5,  s:66, o:.09, d:25, dl:-8,  dx:-12,dy:14,  k:-.04,m:1},
+    {x:2,  y:46, s:18, o:.18, d:16, dl:-4,  dx:8,  dy:-12, k:.07, m:0},
+    {x:91, y:74, s:34, o:.12, d:21, dl:-12, dx:-9, dy:-10, k:.05, m:0}
+  ],
+  fnd:[
+    {x:4,  y:18, s:48, o:.08, d:24, dl:-5,  dx:10, dy:12,  k:-.03,m:1},
+    {x:93, y:80, s:24, o:.12, d:19, dl:-10, dx:-8, dy:-12, k:.06, m:0},
+    {x:9,  y:88, s:16, o:.14, d:17, dl:-2,  dx:7,  dy:-9,  k:.05, m:0}
+  ]
+};
+const sparkEls = [];
+document.querySelectorAll('[data-spk]').forEach(layer=>{
+  (SPARKS[layer.dataset.spk]||[]).forEach(c=>{
+    const i = document.createElement('i'); i.className = 'spk';
+    i.dataset.m = c.m;
+    i.style.cssText = '--x:'+c.x+'%;--y:'+c.y+'%;--s:'+c.s+'px;--o:'+c.o+';--d:'+c.d+'s;--dl:'+c.dl+'s;'+
+      '--dx0:'+c.dx+'px;--dy0:'+c.dy+'px';
+    layer.appendChild(i);
+    sparkEls.push({el:i, host:layer.parentElement, k:c.k});
+  });
+});
+function moveSparks(){
+  if(reduced) return;
+  const vh = window.innerHeight, small = innerWidth < 780 ? .5 : 1;
+  let lastHost = null, mid = 0;
+  sparkEls.forEach(o=>{
+    if(o.host !== lastHost){ const r = o.host.getBoundingClientRect(); mid = r.top + r.height/2 - vh/2; lastHost = o.host; }
+    o.el.style.setProperty('--py', (mid * o.k * small).toFixed(1)+'px');
+  });
+}
 
 /* ============================================================
    ANCHOR NAVIGATION — offset for the fixed nav, works from the mobile menu
