@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Lustradent — Where dentistry connects | Amman, Jordan</title>
+<title>Lustradent: Where dentistry connects | Amman, Jordan</title>
 <meta name="description" content="Lustradent is a Jordanian dental community being built around the relationship between dentist and dental technician. Founded in Amman, 2025, for dental and dental technology students, graduates and professionals.">
 <link rel="canonical" href="https://lustradent.com/">
 <meta name="theme-color" content="#002F36">
@@ -12,11 +12,11 @@
 <meta property="og:site_name" content="Lustradent">
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="ar_JO">
-<meta property="og:title" content="Lustradent — Where dentistry connects">
-<meta property="og:description" content="A Jordanian dental community built around the relationship that defines exceptional dentistry — between the dentist and the dental technician.">
+<meta property="og:title" content="Lustradent: Where dentistry connects">
+<meta property="og:description" content="A Jordanian dental community built around the relationship that defines exceptional dentistry, between the dentist and the dental technician.">
 <meta property="og:url" content="https://lustradent.com/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Lustradent — Where dentistry connects">
+<meta name="twitter:title" content="Lustradent: Where dentistry connects">
 <meta name="twitter:description" content="A Jordanian dental community built around the relationship between dentist and dental technician. Amman, Jordan.">
 <link rel="alternate" hreflang="en" href="https://lustradent.com/">
 <link rel="alternate" hreflang="ar" href="https://lustradent.com/ar/">
@@ -1341,6 +1341,303 @@ html[dir="rtl"] .jrn__step::after{background-position:right}
 @media (prefers-reduced-motion:reduce){
   .spk{animation:none; translate:none; will-change:auto}
 }
+
+/* ============================================================
+   ATMOSPHERE & GLASS — soft light, translucent surfaces, champagne accents
+   ============================================================ */
+:root{
+  --glass-light:linear-gradient(135deg,rgba(255,255,255,.72),rgba(255,255,255,.34));
+  --glass-edge:rgba(255,255,255,.7);
+  --glass-dark:linear-gradient(150deg,rgba(244,241,233,.085),rgba(244,241,233,.025));
+  --glass-dark-edge:rgba(244,241,233,.14);
+  --hi:inset 0 1px 0 rgba(255,255,255,.55);
+  --hi-dark:inset 0 1px 0 rgba(244,241,233,.1);
+}
+/* sparkle colour accents */
+.spk--gold{--spk-c:var(--champagne)}
+.spk[data-t="p"]{animation-name:spkPulse}
+@keyframes spkPulse{
+  0%,100%{transform:scale(.82) rotate(0deg); opacity:calc(var(--o) * .45)}
+  50%{transform:scale(1.14) rotate(6deg); opacity:var(--o)}
+}
+
+/* atmospheric light: large, soft, low-opacity radials from the brand palette */
+#hero::before,#about::before,#problem::before,#conversation::before,#ecosystem::before,#journey::before,
+#glimpse::before,#who::before,#join::before,#founder::after{
+  content:""; position:absolute; inset:0; z-index:0; pointer-events:none}
+#hero::before{background:
+  radial-gradient(55% 45% at 88% 92%, rgba(196,174,134,.14), transparent 70%),
+  radial-gradient(50% 50% at 8% 55%, rgba(11,107,119,.28), transparent 70%)}
+#about::before{background:
+  radial-gradient(45% 55% at 100% 0%, rgba(11,107,119,.1), transparent 70%),
+  radial-gradient(40% 50% at 0% 100%, rgba(196,174,134,.16), transparent 70%)}
+#problem::before{background:
+  radial-gradient(50% 60% at 15% 30%, rgba(196,174,134,.17), transparent 70%),
+  radial-gradient(45% 55% at 90% 80%, rgba(11,107,119,.1), transparent 70%)}
+#conversation::before{background:
+  radial-gradient(55% 70% at 85% 10%, rgba(11,107,119,.55), transparent 70%),
+  radial-gradient(40% 55% at 5% 100%, rgba(196,174,134,.16), transparent 70%)}
+#ecosystem::before{background:
+  radial-gradient(45% 60% at 18% 55%, rgba(11,107,119,.14), transparent 70%),
+  radial-gradient(40% 60% at 88% 40%, rgba(196,174,134,.22), transparent 70%)}
+#journey::before{background:
+  radial-gradient(50% 45% at 10% 8%, rgba(11,107,119,.4), transparent 70%),
+  radial-gradient(45% 45% at 92% 92%, rgba(196,174,134,.13), transparent 70%)}
+#glimpse::before{background:
+  radial-gradient(50% 50% at 50% 0%, rgba(11,107,119,.3), transparent 70%)}
+#who::before{background:
+  radial-gradient(45% 70% at 50% 100%, rgba(196,174,134,.2), transparent 70%)}
+#join::before{background:
+  radial-gradient(50% 70% at 80% 0%, rgba(11,107,119,.55), transparent 70%),
+  radial-gradient(40% 60% at 10% 100%, rgba(196,174,134,.14), transparent 70%)}
+#founder::after{background:
+  radial-gradient(45% 60% at 100% 100%, rgba(196,174,134,.2), transparent 70%),
+  radial-gradient(40% 55% at 0% 0%, rgba(11,107,119,.09), transparent 70%)}
+
+/* TEXT GLASS — editorial paragraphs and notes */
+#about .split > .rv:not(.head-block),.conv__note{
+  background:var(--glass-light); -webkit-backdrop-filter:blur(14px); backdrop-filter:blur(14px);
+  border:1px solid var(--glass-edge); border-radius:var(--radius-md);
+  box-shadow:var(--hi),0 24px 60px -40px rgba(0,47,54,.35); padding:clamp(1.5rem,3vw,2.5rem)}
+.conv__note{max-width:56ch; margin-inline:auto; padding:clamp(1.25rem,2.4vw,2rem) clamp(1.5rem,3vw,2.5rem)}
+
+/* CARD GLASS — conversation cards on teal */
+#conversation .pair > div{background:var(--glass-dark); -webkit-backdrop-filter:blur(12px); backdrop-filter:blur(12px);
+  border-color:var(--glass-dark-edge); box-shadow:var(--hi-dark),0 24px 50px -36px rgba(0,0,0,.5)}
+#conversation .pair > div:hover{border-color:rgba(196,174,134,.5)}
+
+/* FLOATING GLASS — ecosystem object, profile card, join panel */
+.eco{background:linear-gradient(135deg,rgba(255,255,255,.78),rgba(255,255,255,.46));
+  -webkit-backdrop-filter:blur(18px); backdrop-filter:blur(18px); border:1px solid var(--glass-edge);
+  box-shadow:var(--hi),0 40px 90px -50px rgba(0,47,54,.5)}
+.eco__btn[aria-selected="true"]{background:rgba(255,255,255,.85);
+  box-shadow:0 12px 26px -16px rgba(0,74,85,.45),inset 0 0 0 1px rgba(0,74,85,.08)}
+.eco__panel{box-shadow:var(--hi-dark),0 30px 60px -36px rgba(0,47,54,.7)}
+#identity .card{background:var(--glass-light); -webkit-backdrop-filter:blur(14px); backdrop-filter:blur(14px);
+  border-color:var(--glass-edge); box-shadow:var(--hi),0 40px 80px -48px rgba(0,47,54,.5)}
+.join-cta{-webkit-backdrop-filter:blur(14px); backdrop-filter:blur(14px); box-shadow:var(--hi-dark),0 30px 70px -45px rgba(0,0,0,.55)}
+
+/* JOURNEY — connected glass cards, champagne-lit connector */
+.jrn__step{background:var(--glass-dark); -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px);
+  box-shadow:var(--hi-dark),0 24px 50px -36px rgba(0,0,0,.7)}
+.jrn__step.cur{background:linear-gradient(160deg,rgba(196,174,134,.16),rgba(244,241,233,.03));
+  box-shadow:var(--hi-dark),0 0 0 1px rgba(196,174,134,.2),0 0 38px -12px rgba(196,174,134,.3),0 30px 60px -34px rgba(0,0,0,.8)}
+.jrn__step.on::after{box-shadow:0 0 8px rgba(196,174,134,.55)}
+
+/* FOUNDER — atmospheric glass */
+#founder .wrap > .rv{background:linear-gradient(135deg,rgba(255,255,255,.72),rgba(255,255,255,.3));
+  -webkit-backdrop-filter:blur(14px); backdrop-filter:blur(14px); border-color:var(--glass-edge);
+  box-shadow:var(--hi),0 40px 90px -55px rgba(0,47,54,.45)}
+
+@media (max-width:780px){
+  #hero::before,#about::before,#problem::before,#conversation::before,#ecosystem::before,#journey::before,
+  #glimpse::before,#who::before,#join::before,#founder::after{opacity:.55}
+  .eco,.jrn__step,#conversation .pair > div,#about .split > .rv:not(.head-block),.conv__note,#identity .card,
+  .join-cta,#founder .wrap > .rv{-webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px)}
+  .jrn__step.cur{box-shadow:var(--hi-dark),0 0 0 1px rgba(196,174,134,.2)}
+}
+@media (prefers-reduced-motion:reduce){ .spk[data-t="p"]{animation:none} }
+.eco__n{position:static; display:block; font-size:clamp(2.6rem,4.5vw,3.6rem); margin-block-end:.9rem; color:rgba(196,174,134,.7)}
+.btn,.btn--light{border-radius:999px}
+.btn--light{padding:1rem 2.1rem}
+
+/* ============================================================
+   STAR FIELD — fine twinkling dust behind the logo-sparkles
+   ============================================================ */
+.sparkles{--dust:rgba(244,241,233,.75); --dust-gold:rgba(196,174,134,.95)}
+.sparkles--light{--dust:rgba(0,74,85,.5); --dust-gold:rgba(176,148,96,.85)}
+.sparkles::before,.sparkles::after{content:""; position:absolute; inset:0; pointer-events:none;
+  background-repeat:no-repeat; animation:dustTwinkle 6s ease-in-out infinite alternate}
+.sparkles::before{background-image:
+    radial-gradient(1.2px 1.2px at 6% 12%, var(--dust) 55%, transparent 60%),
+    radial-gradient(1px 1px at 14% 38%, var(--dust) 55%, transparent 60%),
+    radial-gradient(1.5px 1.5px at 22% 81%, var(--dust) 55%, transparent 60%),
+    radial-gradient(1px 1px at 31% 22%, var(--dust) 55%, transparent 60%),
+    radial-gradient(1.2px 1.2px at 38% 64%, var(--dust-gold) 55%, transparent 60%),
+    radial-gradient(1px 1px at 47% 9%, var(--dust) 55%, transparent 60%),
+    radial-gradient(1.5px 1.5px at 53% 47%, var(--dust) 55%, transparent 60%),
+    radial-gradient(1px 1px at 61% 88%, var(--dust) 55%, transparent 60%),
+    radial-gradient(1.2px 1.2px at 68% 28%, var(--dust) 55%, transparent 60%),
+    radial-gradient(1px 1px at 74% 71%, var(--dust-gold) 55%, transparent 60%),
+    radial-gradient(1.5px 1.5px at 82% 16%, var(--dust) 55%, transparent 60%),
+    radial-gradient(1px 1px at 89% 52%, var(--dust) 55%, transparent 60%),
+    radial-gradient(1.2px 1.2px at 95% 84%, var(--dust) 55%, transparent 60%),
+    radial-gradient(1px 1px at 44% 93%, var(--dust) 55%, transparent 60%); opacity:.55}
+.sparkles::after{background-image:
+    radial-gradient(1px 1px at 3% 58%, var(--dust) 55%, transparent 60%),
+    radial-gradient(1.2px 1.2px at 11% 91%, var(--dust) 55%, transparent 60%),
+    radial-gradient(1px 1px at 18% 6%, var(--dust) 55%, transparent 60%),
+    radial-gradient(1.5px 1.5px at 27% 44%, var(--dust-gold) 55%, transparent 60%),
+    radial-gradient(1px 1px at 35% 76%, var(--dust) 55%, transparent 60%),
+    radial-gradient(1.2px 1.2px at 42% 31%, var(--dust) 55%, transparent 60%),
+    radial-gradient(1px 1px at 58% 18%, var(--dust) 55%, transparent 60%),
+    radial-gradient(1.5px 1.5px at 64% 57%, var(--dust) 55%, transparent 60%),
+    radial-gradient(1px 1px at 71% 95%, var(--dust) 55%, transparent 60%),
+    radial-gradient(1.2px 1.2px at 78% 40%, var(--dust) 55%, transparent 60%),
+    radial-gradient(1px 1px at 85% 7%, var(--dust-gold) 55%, transparent 60%),
+    radial-gradient(1.5px 1.5px at 92% 69%, var(--dust) 55%, transparent 60%),
+    radial-gradient(1px 1px at 97% 28%, var(--dust) 55%, transparent 60%),
+    radial-gradient(1px 1px at 50% 70%, var(--dust) 55%, transparent 60%); opacity:.2; animation-duration:9s; animation-delay:-4s}
+@keyframes dustTwinkle{from{opacity:.15} to{opacity:.65}}
+@media (max-width:780px){
+  .sparkles::after{display:none}
+  .sparkles::before{opacity:.4}
+}
+@media (prefers-reduced-motion:reduce){
+  .sparkles::before,.sparkles::after{animation:none}
+}
+
+/* solid ✦ stars, champagne (a few cream) */
+:root{--star-solid:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2040%2040%22%3E%3Cpath%20d%3D%22M20%200C21.2%2013.4%2026.6%2018.8%2040%2020%2026.6%2021.2%2021.2%2026.6%2020%2040%2018.8%2026.6%2013.4%2021.2%200%2020%2013.4%2018.8%2018.8%2013.4%2020%200Z%22%2F%3E%3C%2Fsvg%3E")}
+.spk--solid{aspect-ratio:1; --spk-c:var(--champagne);
+  -webkit-mask-image:var(--star-solid); mask-image:var(--star-solid)}
+.spk--solid.spk--cream{--spk-c:var(--ivory)}
+.sparkles--light .spk--solid.spk--cream{--spk-c:var(--champagne)}
+
+/* glimpse captions as glass cards */
+.frames{align-items:stretch; gap:var(--card-gap)}
+.frame{justify-content:center; padding:clamp(1.5rem,2.6vw,2.25rem); border:1px solid var(--glass-dark-edge);
+  border-radius:var(--radius-md); background:var(--glass-dark); -webkit-backdrop-filter:blur(12px); backdrop-filter:blur(12px);
+  box-shadow:var(--hi-dark),0 24px 50px -36px rgba(0,0,0,.7);
+  transition:transform .5s var(--ease-out), border-color .5s var(--ease), box-shadow .5s var(--ease)}
+.frame:hover{transform:translateY(-5px); border-color:rgba(196,174,134,.4);
+  box-shadow:var(--hi-dark),0 30px 60px -34px rgba(0,0,0,.8)}
+.frame p{max-width:none; font-size:.98rem; line-height:1.7; color:#C7D7D5}
+.frames .frame.rv.in:hover{transform:translateY(-5px)}
+@media (max-width:780px){.frame{-webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px)}}
+@media (prefers-reduced-motion:reduce){.frame:hover,.frames .frame.rv.in:hover{transform:none}}
+
+/* who note as a glass card */
+.who__note{max-width:68ch; margin-inline:auto; text-align:center; padding:clamp(1.5rem,3vw,2.25rem) clamp(1.5rem,3.5vw,2.75rem);
+  background:var(--glass-light); -webkit-backdrop-filter:blur(14px); backdrop-filter:blur(14px);
+  border:1px solid var(--glass-edge); border-radius:var(--radius-md);
+  box-shadow:var(--hi),0 24px 60px -40px rgba(0,47,54,.35)}
+@media (max-width:780px){.who__note{-webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px)}}
+
+/* ============================================================
+   FOOTER — a proper site footer: brand, link columns, legal bar
+   ============================================================ */
+footer{position:relative; overflow:hidden; padding-block:clamp(3.5rem,6vw,5.5rem) var(--s4);
+  border-block-start:1px solid rgba(196,174,134,.28);
+  background:radial-gradient(60% 80% at 100% 0%, rgba(11,107,119,.3), transparent 70%),
+             radial-gradient(40% 60% at 0% 100%, rgba(196,174,134,.08), transparent 70%), var(--ink)}
+footer .wrap{text-align:start; display:grid; grid-template-columns:minmax(0,1.25fr) minmax(0,1fr) minmax(0,1fr);
+  column-gap:clamp(2rem,5vw,5rem); row-gap:0}
+.fbig{grid-column:1 / -1; margin:0 0 clamp(2.5rem,5vw,4rem); font-size:clamp(1.9rem,3.6vw,3.2rem);
+  line-height:1.08; max-width:none; text-wrap:balance; padding-block-end:clamp(2rem,4vw,3rem);
+  border-block-end:1px solid var(--line-dark)}
+html[data-lang="ar"] .fbig{line-height:1.35; max-width:none}
+.fgrid{display:contents}
+.fgrid > div:first-child{grid-column:1; justify-self:start; text-align:start}
+.fgrid nav{align-items:flex-start; gap:.2rem; font-size:.95rem}
+.fgrid > nav:nth-of-type(1){grid-column:2}
+.fgrid > nav:nth-of-type(2){grid-column:3}
+.flogo{margin-inline:0; width:clamp(150px,15vw,200px)}
+.fmeta{align-items:flex-start; margin-block-start:var(--s2); gap:.2rem}
+.fgrid a{margin-inline:0; display:inline-block; padding-block:.4rem; opacity:.78; position:relative}
+.fgrid a::after{content:""; position:absolute; inset-inline:0; bottom:.15rem; height:1px; background:var(--champagne);
+  transform:scaleX(0); transform-origin:left; transition:transform .4s var(--ease-out)}
+html[dir="rtl"] .fgrid a::after{transform-origin:right}
+.fgrid a:hover{opacity:1; transform:none; color:var(--champagne)}
+.fgrid a:hover::after{transform:scaleX(1)}
+.fbot{grid-column:1 / -1; flex-direction:row; align-items:center; justify-content:space-between; text-align:start;
+  margin-block-start:clamp(2.5rem,5vw,4rem); padding-block-start:var(--s3)}
+.fbot .fl{justify-content:flex-end; align-items:center}
+.fbot .fl a{opacity:.8; transition:opacity .3s, color .3s}
+.fbot .fl a:hover{opacity:1; color:var(--champagne)}
+@media (max-width:780px){
+  footer .wrap{grid-template-columns:1fr 1fr; row-gap:var(--s4)}
+  .fgrid > div:first-child{grid-column:1 / -1}
+  .fgrid > nav:nth-of-type(1){grid-column:1}
+  .fgrid > nav:nth-of-type(2){grid-column:2}
+  .fbig{margin-block-end:var(--s4)}
+  .fbot{flex-direction:column; align-items:flex-start; gap:var(--s2); margin-block-start:var(--s4)}
+  .fbot .fl{justify-content:flex-start}
+}
+
+/* ============================================================
+   COSMIC ATMOSPHERE — layered nebulae, depth, drifting light
+   ============================================================ */
+:root{--haze:rgba(46,104,122,.22); --veil:rgba(52,84,120,.1)}
+
+/* nebula layers drift slowly and sit on their own parallax speed */
+#hero,#about,#problem,#conversation,#ecosystem,#journey,#glimpse,#who,#join,#founder{overflow:clip}
+#hero::before,#about::before,#problem::before,#conversation::before,#ecosystem::before,#journey::before,
+#glimpse::before,#who::before,#join::before,#founder::after{
+  inset:-9% -4%; translate:0 var(--ny,0px); will-change:transform;
+  animation:nebDrift 46s ease-in-out infinite alternate}
+@keyframes nebDrift{
+  from{transform:translate3d(-1.6%,0,0) scale(1)}
+  to{transform:translate3d(1.6%,-1.2%,0) scale(1.06)}
+}
+#hero::before{background:
+  radial-gradient(48% 42% at 86% 90%, rgba(196,174,134,.15), transparent 70%),
+  radial-gradient(52% 50% at 6% 56%, rgba(11,107,119,.3), transparent 72%),
+  radial-gradient(60% 40% at 50% 0%, var(--haze), transparent 75%),
+  radial-gradient(40% 40% at 78% 22%, var(--veil), transparent 72%),
+  radial-gradient(30% 30% at 28% 88%, rgba(244,241,233,.045), transparent 70%)}
+#conversation::before{background:
+  radial-gradient(55% 65% at 85% 8%, rgba(11,107,119,.55), transparent 70%),
+  radial-gradient(42% 55% at 4% 100%, rgba(196,174,134,.16), transparent 70%),
+  radial-gradient(38% 40% at 40% 55%, var(--veil), transparent 72%),
+  radial-gradient(30% 30% at 70% 90%, rgba(244,241,233,.05), transparent 70%)}
+#journey::before{background:
+  radial-gradient(50% 45% at 8% 6%, rgba(11,107,119,.42), transparent 70%),
+  radial-gradient(46% 46% at 94% 94%, rgba(196,174,134,.14), transparent 70%),
+  radial-gradient(45% 35% at 60% 40%, var(--haze), transparent 75%),
+  radial-gradient(30% 35% at 20% 80%, var(--veil), transparent 72%)}
+#glimpse::before{background:
+  radial-gradient(52% 50% at 50% 0%, rgba(11,107,119,.32), transparent 70%),
+  radial-gradient(35% 40% at 95% 70%, rgba(196,174,134,.1), transparent 70%),
+  radial-gradient(40% 35% at 5% 85%, var(--veil), transparent 72%)}
+#join::before{background:
+  radial-gradient(52% 70% at 80% 0%, rgba(11,107,119,.56), transparent 70%),
+  radial-gradient(40% 60% at 8% 100%, rgba(196,174,134,.15), transparent 70%),
+  radial-gradient(35% 40% at 45% 60%, var(--haze), transparent 75%)}
+
+/* dust and stars on separate depth planes */
+.sparkles::before{inset:-6% 0; translate:0 var(--dA,0px)}
+.sparkles::after{inset:-6% 0; translate:0 var(--dB,0px)}
+
+
+/* slow diagonal drifters: fade in, cross a little sky, fade out */
+.spk[data-t="d"]{animation:spkDiag var(--d) linear var(--dl) infinite}
+@keyframes spkDiag{
+  0%{transform:translate3d(0,0,0); opacity:0}
+  15%{opacity:var(--o)}
+  85%{opacity:var(--o)}
+  100%{transform:translate3d(120px,-80px,0); opacity:0}
+}
+
+/* rare shooting star */
+.shoot{position:absolute; width:150px; height:1px; opacity:0; rotate:24deg; transform-origin:left center;
+  background:linear-gradient(90deg,transparent,rgba(244,241,233,.75) 70%,rgba(196,174,134,.9))}
+.shoot.go{animation:shootAcross 1.7s var(--ease) 1 forwards}
+@keyframes shootAcross{
+  0%{transform:translateX(0); opacity:0}
+  12%{opacity:.8}
+  100%{transform:translateX(300px); opacity:0}
+}
+
+/* faint light pooled behind the journey */
+.jrn{position:relative}
+.jrn::before{content:""; position:absolute; inset:-12% -6%; z-index:0; pointer-events:none; background:radial-gradient(50% 50% at 50% 40%, rgba(11,107,119,.3), transparent 72%)}
+.jrn__step{z-index:1}
+
+@media (max-width:1100px){ .spk[data-tb="0"]{display:none} }
+@media (max-width:780px){
+  #hero::before,#about::before,#problem::before,#conversation::before,#ecosystem::before,#journey::before,
+  #glimpse::before,#who::before,#join::before,#founder::after{animation:none; opacity:.55}
+  .spk[data-t="d"]{display:none}
+  .shoot{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  #hero::before,#about::before,#problem::before,#conversation::before,#ecosystem::before,#journey::before,
+  #glimpse::before,#who::before,#join::before,#founder::after{animation:none; translate:none}
+  .spk[data-t="d"]{animation:none; opacity:var(--o)}
+  .shoot{display:none}
+  .sparkles::before,.sparkles::after{translate:none}
+}
 </style>
 </head>
 <body>
@@ -1402,11 +1699,11 @@ html[dir="rtl"] .jrn__step::after{background-position:right}
   <div class="grain" aria-hidden="true"></div>
   <div class="sparkles" data-spk="hero" aria-hidden="true"></div>
   <div class="wrap hero__in">
-    <h1 class="sr" data-t="hero.h1">Lustradent — where dentistry connects. A dental community in Amman, Jordan.</h1>
+    <h1 class="sr" data-t="hero.h1">Lustradent: where dentistry connects. A dental community in Amman, Jordan.</h1>
     <div class="hero__mark rv in" aria-hidden="true"><span class="mark mark--mask"></span></div>
     <p class="hero__line rv" data-d="1" data-t="hero.line">Where dentistry connects.</p>
     <div class="hero__grid">
-      <p class="body rv" data-d="2" data-t="hero.body">A Jordanian dental community built around the relationship that defines exceptional dentistry — between the dentist and the dental technician.</p>
+      <p class="body rv" data-d="2" data-t="hero.body">A Jordanian dental community built around the relationship that defines exceptional dentistry, between the dentist and the dental technician.</p>
       <div class="hero__meta rv" data-d="3">
         <span class="rule"></span>
         <span data-t="hero.place">Amman, Jordan</span>
@@ -1419,6 +1716,7 @@ html[dir="rtl"] .jrn__step::after{background-position:right}
 
 <!-- ABOUT / IDEA -->
 <section class="sect" id="about">
+  <div class="sparkles sparkles--light" data-spk="about" aria-hidden="true"></div>
   <div class="wrap split">
     <div class="head-block">
       <span class="idx" data-t="about.idx">The idea</span>
@@ -1426,7 +1724,7 @@ html[dir="rtl"] .jrn__step::after{background-position:right}
     </div>
     <div class="rv" data-d="1">
       <p class="body" data-t="about.p1">Behind every well-made crown, bridge or veneer there are at least two professionals: a dentist who reads the patient, and a dental technician who translates that reading into material and form. The result is only as good as the understanding between them.</p>
-      <p class="body" data-t="about.p2">Lustradent is being built as a shared professional home for both — a place where dental and dental technology students meet early, learn from each other, and carry that understanding into their careers.</p>
+      <p class="body" data-t="about.p2">Lustradent is being built as a shared professional home for both, a place where dental and dental technology students meet early, learn from each other, and carry that understanding into their careers.</p>
       <p class="body" data-t="about.p3">We are at the beginning. What exists today is a community, a direction and an open invitation.</p>
     </div>
   </div>
@@ -1434,6 +1732,7 @@ html[dir="rtl"] .jrn__step::after{background-position:right}
 
 <!-- PROBLEM -->
 <section class="sect" id="problem">
+  <div class="sparkles sparkles--light" data-spk="problem" aria-hidden="true"></div>
   <div class="wrap">
     <div class="head-block">
       <span class="idx" data-t="problem.idx">The gap</span>
@@ -1459,13 +1758,14 @@ html[dir="rtl"] .jrn__step::after{background-position:right}
           </ul>
         </div>
       </div>
-      <p class="conv__note rv" data-t="problem.note">Two professions serving one patient — and, in most curricula, two separate educations. When something fails, it is easier to assign blame than to share a vocabulary. That is not a flaw in either profession. It is a gap in how we are taught, and it can be redesigned.</p>
+      <p class="conv__note rv" data-t="problem.note">Two professions serving one patient, and, in most curricula, two separate educations. When something fails, it is easier to assign blame than to share a vocabulary. That is not a flaw in either profession. It is a gap in how we are taught, and it can be redesigned.</p>
     </div>
   </div>
 </section>
 
 <!-- CONVERSATION -->
 <section class="sect" id="conversation">
+  <div class="sparkles" data-spk="conv" aria-hidden="true"></div>
   <div class="wrap">
     <div class="head-block">
       <span class="idx" data-t="conv.idx">Philosophy</span>
@@ -1484,7 +1784,7 @@ html[dir="rtl"] .jrn__step::after{background-position:right}
     <div class="pair">
       <div class="rv" data-d="2" style="grid-column:1/-1">
         <h4 data-t="conv.c.t">What Lustradent adds</h4>
-        <p data-t="conv.c.b" style="max-width:62ch">Neither perspective is complete alone, yet both are usually learned alone. Lustradent exists to bring them into the same room earlier — while people are still students, still forming habits, still deciding how they want to work.</p>
+        <p data-t="conv.c.b" style="max-width:62ch">Neither perspective is complete alone, yet both are usually learned alone. Lustradent exists to bring them into the same room earlier, while people are still students, still forming habits, still deciding how they want to work.</p>
       </div>
     </div>
   </div>
@@ -1497,7 +1797,7 @@ html[dir="rtl"] .jrn__step::after{background-position:right}
     <div class="head-block">
       <span class="idx" data-t="eco.idx">The vision</span>
       <h2 class="statement rv" data-t="eco.title">The ecosystem we’re building.</h2>
-      <p class="body rv" data-d="1" data-t="eco.note">Lustradent is early. What follows is what we are building toward — a direction, not a list of services available today.</p>
+      <p class="body rv" data-d="1" data-t="eco.note">Lustradent is early. What follows is what we are building toward: a direction, not a list of services available today.</p>
     </div>
     <div class="eco">
       <div class="eco__list" role="tablist" aria-label="Ecosystem"></div>
@@ -1529,9 +1829,9 @@ html[dir="rtl"] .jrn__step::after{background-position:right}
     <div class="head-block">
       <span class="idx" data-t="prof.idx">Member identity</span>
       <h2 class="statement rv" data-t="prof.title">More than a name on a list.</h2>
-      <p class="body rv" data-d="1" data-t="prof.p1">We are designing a member profile that describes how you work, not just where you study — discipline, skills, interests, portfolio, what you want to learn and what you can offer.</p>
+      <p class="body rv" data-d="1" data-t="prof.p1">We are designing a member profile that describes how you work, not just where you study: discipline, skills, interests, portfolio, what you want to learn and what you can offer.</p>
       <p class="body rv" data-d="1" data-t="prof.p2">Over time, that is what makes discovery possible: finding the technician who thinks the way you do, or the dentist who communicates the way you need.</p>
-      <p class="rv" data-d="2"><span class="concept-tag" data-t="prof.tag">Concept — in development</span></p>
+      <p class="rv" data-d="2"><span class="concept-tag" data-t="prof.tag">Concept: in development</span></p>
     </div>
     <div class="card rv" data-d="2" aria-label="Conceptual member profile preview">
       <div class="prof__top">
@@ -1560,6 +1860,7 @@ html[dir="rtl"] .jrn__step::after{background-position:right}
 
 <!-- GLIMPSE -->
 <section class="sect" id="glimpse">
+  <div class="sparkles" data-spk="glimpse" aria-hidden="true"></div>
   <div class="wrap">
     <div class="head-block">
       <span class="idx" data-t="glimpse.idx">Atmosphere</span>
@@ -1586,13 +1887,14 @@ html[dir="rtl"] .jrn__step::after{background-position:right}
 
 <!-- WHO -->
 <section class="sect ivory" id="who">
+  <div class="sparkles sparkles--light" data-spk="who" aria-hidden="true"></div>
   <div class="wrap">
     <div class="head-block">
       <span class="idx" data-t="who.idx">Who belongs here</span>
       <h2 class="statement rv" data-t="who.title">One community, many roles.</h2>
     </div>
     <div class="who rv" id="whoList"></div>
-    <p class="body rv who__note" data-d="1" data-t="who.note">Our focus begins with students and new graduates — the moment when habits, standards and professional relationships are still being formed. Everyone joining should have a genuine connection to dentistry or the dental industry.</p>
+    <p class="body rv who__note" data-d="1" data-t="who.note">Our focus begins with students and new graduates, the moment when habits, standards and professional relationships are still being formed. Everyone joining should have a genuine connection to dentistry or the dental industry.</p>
   </div>
 </section>
 
@@ -1624,7 +1926,7 @@ html[dir="rtl"] .jrn__step::after{background-position:right}
 
         <p class="body" data-t="founder.p2">
           Lustradent began in May 2025 as an answer to that. Not a course,
-          not an event company — an environment where future dentists and
+          not an event company, an environment where future dentists and
           future technicians meet before they need each other professionally,
           and learn how the other one thinks.
         </p>
@@ -1650,6 +1952,7 @@ html[dir="rtl"] .jrn__step::after{background-position:right}
 </section>
 <!-- JOIN + CONTACT -->
 <section class="sect" id="join">
+  <div class="sparkles" data-spk="join" aria-hidden="true"></div>
 
   <div class="wrap">
 
@@ -1669,7 +1972,7 @@ html[dir="rtl"] .jrn__step::after{background-position:right}
         data-d="1"
         data-t="join.body">
         This is the start of a professional profile, not a mailing list.
-        Tell us who you are and what you want from this field — it shapes
+        Tell us who you are and what you want from this field. It shapes
         what we build next.
       </p>
 
@@ -1732,8 +2035,8 @@ html[dir="rtl"] .jrn__step::after{background-position:right}
     <div class="fbot">
       <span data-t="footer.copy">© 2026 Lustradent. All rights reserved.</span>
       <span class="fl">
-        <a href="#" style="text-decoration:none" data-t="footer.privacy">Privacy — coming soon</a>
-        <a href="#" style="text-decoration:none" data-t="footer.terms">Terms — coming soon</a>
+        <a href="#" style="text-decoration:none" data-t="footer.privacy">Privacy (coming soon)</a>
+        <a href="#" style="text-decoration:none" data-t="footer.terms">Terms (coming soon)</a>
         <span class="langs">
           <button class="lang" data-set-lang="en" aria-pressed="true" lang="en" aria-label="English">EN</button><span>/</span><button class="lang" data-set-lang="ar" aria-pressed="false" lang="ar" aria-label="العربية">AR</button>
         </span>
@@ -1752,14 +2055,14 @@ en:{
  "a11y.skip":"Skip to content",
  "nav.about":"About","nav.philosophy":"Philosophy","nav.community":"Community","nav.vision":"Vision",
  "nav.founder":"Founder","nav.join":"Join the community","nav.menu":"Menu","nav.close":"Close",
- "hero.h1":"Lustradent — where dentistry connects. A dental community in Amman, Jordan.",
+ "hero.h1":"Lustradent: where dentistry connects. A dental community in Amman, Jordan.",
  "hero.line":"Where dentistry connects.",
- "hero.body":"A Jordanian dental community built around the relationship that defines exceptional dentistry — between the dentist and the dental technician.",
+ "hero.body":"A Jordanian dental community built around the relationship that defines exceptional dentistry, between the dentist and the dental technician.",
  "hero.place":"Amman, Jordan","hero.founded":"Founded May 2025","hero.scroll":"Scroll",
  "about.idx":"The idea",
  "about.title":"No restoration is the work of one person.",
  "about.p1":"Behind every well-made crown, bridge or veneer there are at least two professionals: a dentist who reads the patient, and a dental technician who translates that reading into material and form. The result is only ever as good as the understanding between them.",
- "about.p2":"Lustradent is being built as a shared professional home for both — a place where dental and dental technology students meet early, learn from each other, and carry that understanding into their careers.",
+ "about.p2":"Lustradent is being built as a shared professional home for both, a place where dental and dental technology students meet early, learn from each other, and carry that understanding into their careers.",
  "about.p3":"We are at the beginning. What exists today is a community, a direction, and an open invitation.",
  "problem.idx":"The gap","problem.title":"One outcome. Two perspectives.",
  "problem.a.t":"The dentist",
@@ -1770,57 +2073,57 @@ en:{
  "problem.b.1":"Reads the impression, the scan, the margin",
  "problem.b.2":"Works inside material behaviour and optics",
  "problem.b.3":"Decides layering, contour, translucency, fit",
- "problem.note":"Two professions serving one patient — and, in most curricula, two separate educations. When a case fails, it is easier to assign blame than to share a vocabulary. That is not a flaw in either profession. It is a gap in how we are taught, and it can be redesigned.",
+ "problem.note":"Two professions serving one patient, and, in most curricula, two separate educations. When a case fails, it is easier to assign blame than to share a vocabulary. That is not a flaw in either profession. It is a gap in how we are taught, and it can be redesigned.",
  "conv.idx":"Philosophy","conv.title":"Great dentistry is a conversation.",
  "conv.a.t":"What the dentist brings",
  "conv.a.b":"The patient’s expectation, the biology, the diagnosis, and the clinical judgement that no photograph fully carries.",
  "conv.b.t":"What the technician brings",
  "conv.b.b":"Material, form, function, precision, and the optical behaviour that lets a restoration disappear into a face.",
  "conv.c.t":"What Lustradent adds",
- "conv.c.b":"Neither perspective is complete alone, yet both are usually learned alone. Lustradent exists to bring them into the same room earlier — while people are still students, still forming habits, still deciding how they want to work.",
+ "conv.c.b":"Neither perspective is complete alone, yet both are usually learned alone. Lustradent exists to bring them into the same room earlier, while people are still students, still forming habits, still deciding how they want to work.",
  "eco.idx":"The vision","eco.title":"The ecosystem we’re building.",
- "eco.note":"Lustradent is early. What follows is what we are building toward — a direction, not a list of services available today.",
+ "eco.note":"Lustradent is early. What follows is what we are building toward: a direction, not a list of services available today.",
  "jrn.idx":"Member journey","jrn.title":"You don’t attend Lustradent. You grow with it.",
  "jrn.loop":"And then the line turns back on itself: the student who arrived to learn returns as the professional who teaches.",
  "prof.idx":"Member identity","prof.title":"More than a name on a list.",
- "prof.p1":"We are designing a member profile that describes how you work, not just where you study — discipline, skills, interests, portfolio, what you want to learn and what you can offer.",
+ "prof.p1":"We are designing a member profile that describes how you work, not just where you study: discipline, skills, interests, portfolio, what you want to learn and what you can offer.",
  "prof.p2":"Over time, that is what makes discovery possible: finding the technician who thinks the way you do, or the dentist who communicates the way you need.",
- "prof.tag":"Concept — in development",
+ "prof.tag":"Concept: in development",
  "prof.name":"Member name","prof.role":"Dental Technology · Final year · Amman",
  "prof.k1":"Discipline","prof.v1":"Dental technology","prof.k2":"Stage","prof.v2":"Student",
  "prof.k3":"Graduation","prof.v3":"2027","prof.k4":"Open to","prof.v4":"Case collaboration",
  "prof.c1":"Ceramics","prof.c2":"Shade & optics","prof.c3":"CAD/CAM","prof.c4":"Dental photography","prof.c5":"Case planning",
  "glimpse.idx":"Atmosphere","glimpse.title":"A glimpse into what we’re building.",
- "glimpse.tag":"Conceptual — no Lustradent event has taken place yet",
+ "glimpse.tag":"Conceptual: no Lustradent event has taken place yet",
  "glimpse.ph":"Photography to come",
  "glimpse.c1":"Small groups around a single case. A dentist, a technician and a student looking at the same margin and disagreeing productively.",
  "glimpse.c2":"Hands, powders, a brush, a scan on screen. The craft photographed closely enough to respect it.",
  "glimpse.c3":"A calm, well-lit room in Amman. Contemporary, unbranded, built for conversation rather than applause.",
  "who.idx":"Who belongs here","who.title":"One community, many roles.",
- "who.note":"Our focus begins with students and new graduates — the moment when habits, standards and professional relationships are still being formed. Everyone who joins should have a genuine connection to dentistry or the dental industry.",
+ "who.note":"Our focus begins with students and new graduates, the moment when habits, standards and professional relationships are still being formed. Everyone who joins should have a genuine connection to dentistry or the dental industry.",
  "founder.idx":"Founder","founder.ph":"Founder portrait to come",
  "founder.title":"It started with a question nobody was asking out loud.",
  "founder.p1":"I study dental technology. Early on I noticed something that kept repeating: the dentist and the technician are responsible for the same result, but they rarely learn in the same room. When a case doesn’t work, the conversation turns into blame instead of understanding.",
- "founder.p2":"Lustradent began in May 2025 as an answer to that. Not a course, not an event company — an environment where future dentists and future technicians meet before they need each other professionally, and learn how the other one thinks.",
+ "founder.p2":"Lustradent began in May 2025 as an answer to that. Not a course, not an event company, an environment where future dentists and future technicians meet before they need each other professionally, and learn how the other one thinks.",
  "founder.p3":"My ambition is not only to raise technical skill. It is to change the habit of communication in our field, starting with my generation, here in Amman.",
  "founder.role":"Founder, Lustradent · Dental Technology",
  "join.idx":"Membership","join.title":"Join the community.",
- "join.body":"This is the start of a professional profile, not a mailing list. Tell us who you are and what you want from this field — it shapes what we build next.",
+ "join.body":"This is the start of a professional profile, not a mailing list. Tell us who you are and what you want from this field. It shapes what we build next.",
  "join.note":"Joining is by application. Every submission is reviewed individually before membership begins.",
  "join.cta":"Join by email","join.cta.note":"Opens your email app, addressed to Lustradent.","join.or":"Prefer to talk directly?",
  "contact.idx":"Contact","contact.title":"Talk to us directly.",
  "contact.k1":"Email","contact.k2":"Phone","contact.k3":"WhatsApp","contact.v3":"Message us",
  "footer.big":"The future of dentistry is collaborative.",
  "footer.est":"Founded May 2025","footer.copy":"© 2026 Lustradent. All rights reserved.",
- "footer.privacy":"Privacy — coming soon","footer.terms":"Terms — coming soon",
- "meta.title":"Lustradent — Where dentistry connects | Amman, Jordan",
+ "footer.privacy":"Privacy (coming soon)","footer.terms":"Terms (coming soon)",
+ "meta.title":"Lustradent: Where dentistry connects | Amman, Jordan",
  "meta.desc":"Lustradent is a Jordanian dental community being built around the relationship between dentist and dental technician. Founded in Amman, 2025."
 },
 ar:{
  "a11y.skip":"تخطَّ إلى المحتوى",
  "nav.about":"عن لاسترادينت","nav.philosophy":"الفلسفة","nav.community":"المجتمع","nav.vision":"الرؤية",
  "nav.founder":"المؤسِّسة","nav.join":"انضمّ إلى المجتمع","nav.menu":"القائمة","nav.close":"إغلاق",
- "hero.h1":"لاسترادينت — حيث يلتقي طبّ الأسنان. مجتمع لطبّ الأسنان في عمّان، الأردن.",
+ "hero.h1":"لاسترادينت: حيث يلتقي طبّ الأسنان. مجتمع لطبّ الأسنان في عمّان، الأردن.",
  "hero.line":"حيث يلتقي طبّ الأسنان.",
  "hero.body":"مجتمع أردنيّ لطبّ الأسنان، قائم على العلاقة التي يُبنى عليها العمل المتقن: العلاقة بين طبيب الأسنان وفنّيّ الأسنان.",
  "hero.place":"عمّان، الأردن","hero.founded":"تأسّس في أيّار ٢٠٢٥","hero.scroll":"تابع النزول",
@@ -1853,13 +2156,13 @@ ar:{
  "prof.idx":"هويّة العضو","prof.title":"أكثر من اسم في قائمة.",
  "prof.p1":"نصمّم ملفًّا شخصيًّا يصف كيف تعمل، لا أين تدرس فحسب: التخصّص، والمهارات، والاهتمامات، وأعمالك، وما تريد تعلّمه وما تستطيع تقديمه.",
  "prof.p2":"هذا ما يجعل الاكتشاف ممكنًا مع الوقت: أن تجد الفنّيّ الذي يفكّر بطريقتك، أو الطبيب الذي يتواصل بالطريقة التي تحتاجها.",
- "prof.tag":"تصوّر — قيد التطوير",
+ "prof.tag":"تصوّر: قيد التطوير",
  "prof.name":"اسم العضو","prof.role":"تكنولوجيا الأسنان · سنة التخرّج · عمّان",
  "prof.k1":"التخصّص","prof.v1":"تكنولوجيا الأسنان","prof.k2":"المرحلة","prof.v2":"طالب",
  "prof.k3":"سنة التخرّج","prof.v3":"٢٠٢٧","prof.k4":"منفتح على","prof.v4":"التعاون في الحالات",
  "prof.c1":"الخزف","prof.c2":"اللون والخصائص الضوئيّة","prof.c3":"التصميم والتصنيع الرقميّ","prof.c4":"تصوير الأسنان","prof.c5":"تخطيط الحالة",
  "glimpse.idx":"الأجواء","glimpse.title":"لمحة ممّا نبنيه.",
- "glimpse.tag":"تصوّر — لم يُقَم أيّ حدث للاسترادينت بعد",
+ "glimpse.tag":"تصوّر: لم يُقَم أيّ حدث للاسترادينت بعد",
  "glimpse.ph":"صور لاحقة",
  "glimpse.c1":"مجموعات صغيرة حول حالة واحدة: طبيب وفنّيّ وطالب ينظرون إلى الحدّ نفسه ويختلفون اختلافًا مثمرًا.",
  "glimpse.c2":"أيدٍ ومساحيق وفرشاة ومسحٌ رقميّ على الشاشة؛ حرفةٌ مصوَّرة عن قرب يليق بها.",
@@ -1880,8 +2183,8 @@ ar:{
  "contact.k1":"البريد الإلكترونيّ","contact.k2":"الهاتف","contact.k3":"واتساب","contact.v3":"راسلنا",
  "footer.big":"مستقبل طبّ الأسنان تعاونيّ.",
  "footer.est":"تأسّس في أيّار ٢٠٢٥","footer.copy":"© ٢٠٢٦ لاسترادينت. جميع الحقوق محفوظة.",
- "footer.privacy":"الخصوصيّة — قريبًا","footer.terms":"الشروط — قريبًا",
- "meta.title":"لاسترادينت — حيث يلتقي طبّ الأسنان | عمّان، الأردن",
+ "footer.privacy":"الخصوصيّة (قريبًا)","footer.terms":"الشروط (قريبًا)",
+ "meta.title":"لاسترادينت: حيث يلتقي طبّ الأسنان | عمّان، الأردن",
  "meta.desc":"لاسترادينت مجتمع أردنيّ لطبّ الأسنان يُبنى على العلاقة بين طبيب الأسنان وفنّيّ الأسنان. تأسّس في عمّان عام ٢٠٢٥."
 }};
 
@@ -1890,7 +2193,7 @@ const ECO = {
  en:[
   ["Learn","Workshops, talks and case discussions that cross the line between clinic and laboratory."],
   ["Connect","Meet students, graduates and professionals from every part of the dental team."],
-  ["Understand","See how the other side thinks — the constraints, the vocabulary, the decisions behind a case."],
+  ["Understand","See how the other side thinks: the constraints, the vocabulary, the decisions behind a case."],
   ["Collaborate","Work through ideas, projects and real cases together, before the stakes are high."],
   ["Build","Turn conversations into working relationships, and relationships into teams."],
   ["Return","Come back after graduation as a speaker, mentor, collaborator or contributor."]
@@ -1906,7 +2209,7 @@ const ECO = {
 };
 const JRN = {
  en:[
-  ["Student","You arrive while you are still learning — that is the point."],
+  ["Student","You arrive while you are still learning. That is the point."],
   ["Discover","Your first sessions show you how the other half of the field sees the same case."],
   ["Meet","You find people from the other side of your future workflow, years before you need them."],
   ["Co-create","A shared project shows you how you actually communicate under real constraints."],
@@ -2105,35 +2408,131 @@ function observeAll(){ document.querySelectorAll('.rv:not(.in)').forEach(el=>io.
    LOGO SPARKLES — placement, motion and gentle parallax
    ============================================================ */
 const SPARKS = {
-  /* x,y = % of section · s = px · o = opacity · d = float seconds · dx,dy = drift px · k = parallax · m = keep on mobile */
+  /* x,y = % of section · s = px · o = opacity · d = float s · dx,dy = drift px · k = parallax
+     m = keep on mobile · g = champagne accent · p = gentle pulse instead of drift */
   hero:[
     {x:5,  y:20, s:22, o:.2,  d:17, dl:-2,  dx:10, dy:-14, k:.05, m:1},
     {x:90, y:11, s:58, o:.1,  d:24, dl:-9,  dx:-12,dy:16,  k:-.04,m:1},
     {x:83, y:60, s:16, o:.2,  d:15, dl:-5,  dx:8,  dy:-10, k:.08, m:0},
-    {x:11, y:72, s:88, o:.08, d:28, dl:-13, dx:14, dy:-12, k:-.03,m:0},
-    {x:68, y:84, s:30, o:.14, d:20, dl:-7,  dx:-9, dy:12,  k:.06, m:1}
+    {x:11, y:72, s:96, o:.07, d:28, dl:-13, dx:14, dy:-12, k:-.03,m:0},
+    {x:68, y:84, s:30, o:.14, d:20, dl:-7,  dx:-9, dy:12,  k:.06, m:1},
+    {x:94, y:77, s:28, o:.42, d:22, dl:-4,  dx:-6, dy:-16, k:.07, m:1, g:1},
+    {x:-2, y:46, s:46, o:.1,  d:26, dl:-15, dx:12, dy:-8,  k:-.05,m:0},
+    {x:30, y:14, s:9,  o:.24, d:8,  dl:-3,  dx:0,  dy:0,   k:.04, m:0, p:1}
+  ],
+  about:[
+    {x:2,  y:14, s:66, o:.06, d:27, dl:-6,  dx:10, dy:12,  k:-.03,m:1},
+    {x:95, y:9,  s:18, o:.3,  d:19, dl:-9,  dx:-6, dy:-12, k:.05, m:1, g:1},
+    {x:90, y:90, s:10, o:.16, d:9,  dl:-2,  dx:0,  dy:0,   k:.03, m:0, p:1}
+  ],
+  problem:[
+    {x:97, y:15, s:48, o:.07, d:25, dl:-8,  dx:-10,dy:14,  k:-.04,m:0},
+    {x:4,  y:88, s:14, o:.3,  d:18, dl:-5,  dx:6,  dy:-10, k:.05, m:0, g:1}
+  ],
+  conv:[
+    {x:3,  y:20, s:42, o:.1,  d:24, dl:-6,  dx:10, dy:-12, k:-.04,m:1},
+    {x:92, y:68, s:20, o:.4,  d:20, dl:-10, dx:-7, dy:-12, k:.06, m:0, g:1},
+    {x:50, y:6,  s:10, o:.22, d:8,  dl:-4,  dx:0,  dy:0,   k:.03, m:0, p:1}
   ],
   eco:[
     {x:3,  y:10, s:74, o:.07, d:26, dl:-6,  dx:12, dy:14,  k:-.03,m:1},
     {x:94, y:22, s:20, o:.14, d:18, dl:-11, dx:-8, dy:-12, k:.06, m:0},
-    {x:89, y:86, s:42, o:.09, d:23, dl:-3,  dx:-10,dy:-14, k:.04, m:0}
+    {x:89, y:86, s:42, o:.09, d:23, dl:-3,  dx:-10,dy:-14, k:.04, m:0},
+    {x:97, y:52, s:12, o:.38, d:9,  dl:-5,  dx:0,  dy:0,   k:.05, m:1, g:1, p:1}
   ],
   jrn:[
     {x:94, y:5,  s:66, o:.09, d:25, dl:-8,  dx:-12,dy:14,  k:-.04,m:1},
     {x:2,  y:46, s:18, o:.18, d:16, dl:-4,  dx:8,  dy:-12, k:.07, m:0},
-    {x:91, y:74, s:34, o:.12, d:21, dl:-12, dx:-9, dy:-10, k:.05, m:0}
+    {x:91, y:74, s:34, o:.12, d:21, dl:-12, dx:-9, dy:-10, k:.05, m:0},
+    {x:48, y:3,  s:26, o:.36, d:23, dl:-6,  dx:6,  dy:-12, k:.06, m:1, g:1}
+  ],
+  glimpse:[
+    {x:3,  y:10, s:58, o:.08, d:26, dl:-7,  dx:10, dy:12,  k:-.03,m:1},
+    {x:95, y:55, s:14, o:.32, d:17, dl:-3,  dx:-6, dy:-10, k:.06, m:0, g:1},
+    {x:8,  y:92, s:24, o:.14, d:21, dl:-11, dx:8,  dy:-10, k:.04, m:0}
+  ],
+  who:[
+    {x:3,  y:30, s:32, o:.08, d:24, dl:-9,  dx:8,  dy:12,  k:-.03,m:0},
+    {x:94, y:80, s:12, o:.32, d:9,  dl:-2,  dx:0,  dy:0,   k:.05, m:0, g:1, p:1}
   ],
   fnd:[
     {x:4,  y:18, s:48, o:.08, d:24, dl:-5,  dx:10, dy:12,  k:-.03,m:1},
     {x:93, y:80, s:24, o:.12, d:19, dl:-10, dx:-8, dy:-12, k:.06, m:0},
-    {x:9,  y:88, s:16, o:.14, d:17, dl:-2,  dx:7,  dy:-9,  k:.05, m:0}
+    {x:9,  y:88, s:16, o:.14, d:17, dl:-2,  dx:7,  dy:-9,  k:.05, m:0},
+    {x:96, y:12, s:20, o:.34, d:21, dl:-7,  dx:-6, dy:-12, k:.05, m:1, g:1}
+  ],
+  join:[
+    {x:5,  y:22, s:50, o:.1,  d:25, dl:-6,  dx:10, dy:-12, k:-.04,m:1},
+    {x:92, y:30, s:16, o:.42, d:18, dl:-9,  dx:-6, dy:-10, k:.06, m:1, g:1},
+    {x:84, y:88, s:10, o:.2,  d:8,  dl:-3,  dx:0,  dy:0,   k:.04, m:0, p:1}
   ]
 };
+/* extra stars: a seeded, uneven scatter so the sky feels deeper without hand-placing each one */
+function rng(seed){ return ()=>{ seed|=0; seed=seed+0x6D2B79F5|0; let t=Math.imul(seed^seed>>>15,1|seed); t=t+Math.imul(t^t>>>7,61|t)^t; return((t^t>>>14)>>>0)/4294967296; }; }
+const EXTRA = {hero:12, about:6, problem:6, conv:8, eco:8, jrn:9, glimpse:8, who:6, fnd:8, join:8};
+Object.keys(EXTRA).forEach((id,n)=>{
+  const r = rng(1000+n*77), list = SPARKS[id] = SPARKS[id] || [];
+  for(let i=0;i<EXTRA[id];i++){
+    const big = r() < .14, s = big ? 26+r()*30 : 7+r()*13;
+    const edge = r() < .5;
+    let x = edge ? (r()<.5 ? -1+r()*14 : 86+r()*14) : 6+r()*86, y = 2+r()*94;
+    if(id==='hero' && x>8 && x<92 && y>30 && y<60){ y = r()<.5 ? 4+r()*22 : 64+r()*30; }   /* keep the logo clear */
+    const drifter = !big && r() < .18;
+    list.push({
+      x, y,
+      s: +s.toFixed(1),
+      o: +(big ? .06+r()*.07 : .14+r()*.2).toFixed(2),
+      d: drifter ? +(46+r()*34).toFixed(0) : +(14+r()*16).toFixed(1), dl: -Math.round(r()*14),
+      dx: Math.round((r()-.5)*22), dy: Math.round((r()-.5)*26),
+      k: +((r()-.5)*.16).toFixed(3),
+      m: i < 2 ? 1 : 0, tb: i % 2,
+      g: r() < .2 ? 1 : 0,
+      p: !big && !drifter && r() < .45 ? 1 : 0,
+      z: drifter ? 1 : 0
+    });
+  }
+});
+/* solid champagne stars — the same ✦ used between the roles in "One community, many roles" */
+const SOLID = {hero:7, about:4, problem:4, conv:5, eco:5, jrn:6, glimpse:5, who:10, fnd:5, join:5};
+Object.keys(SOLID).forEach((id,n)=>{
+  const r = rng(5000+n*131), list = SPARKS[id];
+  for(let i=0;i<SOLID[id];i++){
+    list.push({
+      x: r()<.45 ? (r()<.5 ? 1+r()*11 : 87+r()*11) : 8+r()*84,
+      y: 3+r()*92,
+      s: +(8+r()*14).toFixed(1),
+      o: +(.4+r()*.35).toFixed(2),
+      d: +(10+r()*12).toFixed(1), dl: -Math.round(r()*12),
+      dx: Math.round((r()-.5)*14), dy: Math.round((r()-.5)*18),
+      k: +((r()-.5)*.12).toFixed(3),
+      m: i < 1 ? 1 : 0, f: 1, p: r() < .6 ? 1 : 0, w: r() < .25 ? 1 : 0
+    });
+  }
+});
+/* a few brighter champagne focal stars */
+const FOCAL = {hero:[{x:93,y:31},{x:5,y:64}], eco:[{x:4,y:72}], jrn:[{x:4,y:22}], fnd:[{x:5,y:52}], join:[{x:52,y:9}]};
+Object.keys(FOCAL).forEach(id=>FOCAL[id].forEach((p,i)=>SPARKS[id].push(
+  {x:p.x, y:p.y, s:19+i*3, o:.85, d:11+i*3, dl:-i*3, dx:0, dy:0, k:.04, m:1, f:1, p:1}
+)));
+/* rare shooting star, hero only */
+(function(){
+  const host = document.getElementById('hero'); if(!host) return;
+  const layer = host.querySelector('.sparkles'), el = document.createElement('i'); el.className = 'shoot'; layer.appendChild(el);
+  function fire(){
+    const r = host.getBoundingClientRect();
+    if(!reduced && innerWidth >= 1000 && !document.hidden && r.bottom > 0 && r.top < innerHeight*.5){
+      el.style.left = (18+Math.random()*60)+'%'; el.style.top = (5+Math.random()*26)+'%';
+      el.classList.remove('go'); void el.offsetWidth; el.classList.add('go');
+    }
+    setTimeout(fire, 18000 + Math.random()*20000);
+  }
+  if(!reduced) setTimeout(fire, 9000);
+})();
 const sparkEls = [];
 document.querySelectorAll('[data-spk]').forEach(layer=>{
   (SPARKS[layer.dataset.spk]||[]).forEach(c=>{
     const i = document.createElement('i'); i.className = 'spk';
-    i.dataset.m = c.m;
+    i.dataset.m = c.m; if(c.tb === 0) i.dataset.tb = '0'; if(c.z) i.dataset.t = 'd'; if(c.g) i.classList.add('spk--gold'); if(c.f) i.classList.add('spk--solid'); if(c.w) i.classList.add('spk--cream'); if(c.p) i.dataset.t = 'p';
     i.style.cssText = '--x:'+c.x+'%;--y:'+c.y+'%;--s:'+c.s+'px;--o:'+c.o+';--d:'+c.d+'s;--dl:'+c.dl+'s;'+
       '--dx0:'+c.dx+'px;--dy0:'+c.dy+'px';
     layer.appendChild(i);
@@ -2144,6 +2543,12 @@ function moveSparks(){
   if(reduced) return;
   const vh = window.innerHeight, small = innerWidth < 780 ? .5 : 1;
   let lastHost = null, mid = 0;
+  document.querySelectorAll('[data-spk]').forEach(l=>{
+    const h = l.parentElement, r = h.getBoundingClientRect(), m = r.top + r.height/2 - vh/2;
+    h.style.setProperty('--ny', (m * -.035 * small).toFixed(1)+'px');
+    l.style.setProperty('--dA', (m * .02 * small).toFixed(1)+'px');
+    l.style.setProperty('--dB', (m * -.04 * small).toFixed(1)+'px');
+  });
   sparkEls.forEach(o=>{
     if(o.host !== lastHost){ const r = o.host.getBoundingClientRect(); mid = r.top + r.height/2 - vh/2; lastHost = o.host; }
     o.el.style.setProperty('--py', (mid * o.k * small).toFixed(1)+'px');
