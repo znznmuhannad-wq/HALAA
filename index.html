@@ -655,6 +655,12 @@ html[dir="rtl"] .fgrid a::after{transform-origin:right}
 .shoot{display:none}
 .sparkles::before,.sparkles::after{translate:none}}
 .is-off::before,.is-off::after,.is-off .spk,.is-off .sparkles::before,.is-off .sparkles::after{animation-play-state:paused}
+.mailpick{position:relative;display:inline-block}
+.mailpick__menu{position:absolute;inset-block-start:calc(100% + .6rem);inset-inline-start:0;z-index:5;min-width:100%;display:flex;flex-direction:column;padding:.4rem;border:1px solid var(--glass-dark-edge);border-radius:var(--radius-md);background:var(--ink);box-shadow:var(--hi-dark),0 24px 50px -22px rgba(0,0,0,.8)}
+.mailpick__menu[hidden]{display:none}
+.mailpick__menu a{padding:.7rem 1.1rem;border-radius:calc(var(--radius-md) - 6px);color:var(--ivory);text-decoration:none;font-size:.92rem;white-space:nowrap;transition:background .3s var(--ease),color .3s var(--ease)}
+.mailpick__menu a:hover,.mailpick__menu a:focus-visible{background:rgba(244,241,233,.1);color:var(--champagne)}
+@media (max-width:780px){.mailpick{width:100%}.mailpick .btn{width:100%}.mailpick__menu{inset-inline:0}}
 </style>
 </head>
 <body>
@@ -1007,7 +1013,14 @@ html[dir="rtl"] .fgrid a::after{transform-origin:right}
 
     <div class="join-cta rv" data-d="2">
       <div class="join-cta__main">
-        <a class="btn btn--light" href="mailto:lustradentbyhala@gmail.com?subject=Join%20Lustradent" data-t="join.cta">Join by email</a>
+        <div class="mailpick">
+          <a class="btn btn--light" id="mailBtn" href="mailto:lustradentbyhala@gmail.com?subject=Join%20Lustradent" aria-haspopup="true" aria-expanded="false" aria-controls="mailMenu" data-t="join.cta">Join by email</a>
+          <div class="mailpick__menu" id="mailMenu" role="menu" hidden>
+            <a role="menuitem" href="https://mail.google.com/mail/?view=cm&fs=1&to=lustradentbyhala@gmail.com&su=Join%20Lustradent" target="_blank" rel="noopener">Gmail</a>
+            <a role="menuitem" href="https://outlook.live.com/mail/0/deeplink/compose?to=lustradentbyhala@gmail.com&subject=Join%20Lustradent" target="_blank" rel="noopener">Outlook</a>
+            <a role="menuitem" href="mailto:lustradentbyhala@gmail.com?subject=Join%20Lustradent" data-t="join.app">Mail app</a>
+          </div>
+        </div>
         <p class="join-cta__note" data-t="join.cta.note">Opens your email app, addressed to Lustradent.</p>
       </div>
       <div class="join-cta__alt">
@@ -1127,7 +1140,7 @@ en:{
  "join.idx":"Membership","join.title":"Join the community.",
  "join.body":"This is the start of a professional profile, not a mailing list. Tell us who you are and what you want from this field. It shapes what we build next.",
  "join.note":"Joining is by application. Every submission is reviewed individually before membership begins.",
- "join.cta":"Join by email","join.cta.note":"Opens your email app, addressed to Lustradent.","join.or":"Prefer to talk directly?",
+ "join.app":"Mail app","join.cta":"Join by email","join.cta.note":"Opens your email app, addressed to Lustradent.","join.or":"Prefer to talk directly?",
  "contact.idx":"Contact","contact.title":"Talk to us directly.",
  "contact.k1":"Email","contact.k2":"Phone","contact.k3":"WhatsApp","contact.v3":"Message us",
  "footer.big":"The future of dentistry is collaborative.",
@@ -1195,7 +1208,7 @@ ar:{
  "join.idx":"العضويّة","join.title":"انضمّ إلى المجتمع.",
  "join.body":"هذه بداية ملفّ مهنيّ، لا قائمة بريديّة. عرّفنا بنفسك وبما تريده من هذا المجال؛ فهذا ما يرسم ما نبنيه تاليًا.",
  "join.note":"الانضمام بالتقديم. تُراجَع كلّ استمارة على حدة قبل بدء العضويّة.",
- "join.cta":"انضمّ عبر البريد","join.cta.note":"يفتح تطبيق بريدك الإلكترونيّ موجّهًا إلى لاسترادينت.","join.or":"تفضّل التواصل المباشر؟",
+ "join.app":"تطبيق البريد","join.cta":"انضمّ عبر البريد","join.cta.note":"يفتح تطبيق بريدك الإلكترونيّ موجّهًا إلى لاسترادينت.","join.or":"تفضّل التواصل المباشر؟",
  "contact.idx":"تواصل","contact.title":"تواصل معنا مباشرة.",
  "contact.k1":"البريد الإلكترونيّ","contact.k2":"الهاتف","contact.k3":"واتساب","contact.v3":"راسلنا",
  "footer.big":"مستقبل طبّ الأسنان تعاونيّ.",
@@ -1605,6 +1618,18 @@ document.addEventListener('click',e=>{
   if(wasOpen) closeMenu();
   requestAnimationFrame(()=>goTo(h));
 });
+
+/* ============================================================
+   JOIN BY EMAIL — choose Gmail, Outlook or the device's mail app
+   ============================================================ */
+const mailBtn = document.getElementById('mailBtn'), mailMenu = document.getElementById('mailMenu');
+if(mailBtn && mailMenu){
+  const setMail = open => { mailMenu.hidden = !open; mailBtn.setAttribute('aria-expanded', String(open)); };
+  mailBtn.addEventListener('click', e=>{ e.preventDefault(); setMail(mailMenu.hidden); if(!mailMenu.hidden) mailMenu.querySelector('a').focus(); });
+  mailMenu.addEventListener('click', e=>{ if(e.target.closest('a')) setMail(false); });
+  document.addEventListener('click', e=>{ if(!mailMenu.hidden && !e.target.closest('.mailpick')) setMail(false); });
+  document.addEventListener('keydown', e=>{ if(e.key === 'Escape' && !mailMenu.hidden){ setMail(false); mailBtn.focus(); } });
+}
 
 /* ============================================================
    BOOT
